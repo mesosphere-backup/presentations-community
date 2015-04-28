@@ -364,13 +364,6 @@ YARN-NodeLabels: Attributes+Reservations
           </aside>
         </section>
 
-        <!--section data-background="assets/front-page.jpg">
-          <img src="assets/high-level-architecture.png">
-          <aside class="notes">
-          SOA web-services, Jenkins/build-farm, memcache, cron-jobs, shell scripts, Kubernetes, Cassandra, (HDFS), ElasticSearch, MPI/HPC jobs, etc.
-          </aside>
-        </section-->
-
         <section data-background="assets/front-page.jpg">
           <h2>Myriad Overview</h2>
           <h3> <ul>
@@ -382,27 +375,28 @@ YARN-NodeLabels: Attributes+Reservations
         </section>
 
         <section data-background="assets/front-page.jpg">
-          <h2>History of Myriad</h2>
-          <table>
-          <tr>
-            <td><h3><i class="fa fa-lightbulb-o"></i></h3></td><td><h3>Mohit Soni from eBay builds prototype, presents at MesosCon</h3></td>
-          </tr><tr>
-            <td><h3><i class="fa fa-flask"></i></h3></td><td><h3>Santosh Marella from MapR <br>attends Mesosphere HackWeek, <br>builds independent prototype</h3></td>
-          </tr><tr>
-            <td><h3><i class="fa fa-comments-o"></i></h3></td><td><h3>Adam introduces Mohit and Santosh, both prototypes merged together</h3></td>
-          </tr><tr>
-            <td><h3><i class="fa fa-group"></i></h3></td><td><h3>Myriad accepted into <a href="https://wiki.apache.org/incubator/MyriadProposal">Apache Incubator</a> March 1, 2015</h3></td>
-          </tr>
-          </table>
-          <aside class="notes"></aside>
+          <img src="assets/data-center-architecture.png">
+          <aside class="notes">
+            <li> Apps/Micro Services/Distributed Frameworks need infinite resources, infinite storage.
+            <li> "Big Apps" and "Big Data" Symbiosis
+            <li> Big Apps require fast access to storage
+            <li> Can't have cluster silos anymore
+          </aside>
         </section>
 
         <section data-background="assets/front-page.jpg">
-          <img width="70%" src="assets/how-it-works.png">
+          <img src="assets/high-level-architecture.png">
           <aside class="notes">
-              RM Plugin: Implements YARN scheduler and Mesos scheduler interfaces
-              Myriad Executor: Launches NM, mounts YARN cgroups under Mesos namespace
-              REST API: scale up/down, declarative
+          SOA web-services, Jenkins/build-farm, memcache, cron-jobs, shell scripts, Kubernetes, Cassandra, (HDFS), ElasticSearch, MPI/HPC jobs, etc.
+          </aside>
+        </section>
+
+        <section data-background="assets/front-page.jpg">
+          <img src="assets/how-it-works.png">
+          <aside class="notes">
+              <li> RM Plugin: Implements YARN scheduler and Mesos scheduler interfaces
+              <li> Myriad Executor: Launches NM, mounts YARN cgroups under Mesos namespace
+              <li> REST API: scale up/down, declarative
           </aside>
         </section>
 
@@ -411,6 +405,7 @@ YARN-NodeLabels: Attributes+Reservations
           <h3> <ul>
             <li>Fine-grained scaling
             <li>Myriad scheduler HA, task reconciliation
+            <li>RM discovery using Marathon/Mesos-DNS
             <li>Distribution of hadoop binaries
             <li>Dockerization
             <li>Upcoming: Multiple isolated YARN clusters
