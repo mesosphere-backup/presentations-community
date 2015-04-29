@@ -330,39 +330,9 @@ YARN-NodeLabels: Attributes+Reservations
         </section>
 
         <section data-background="assets/front-page.jpg">
-          <h2>YARN on the fly</h2>
-          <ul> <h3>
-            <li>Quick dev/QA clusters; compatibility testing
-            <li>YARN doesn't run YARN well, Mesos does
-            <li>Fault-tolerance: Run RM on Marathon, auto-restart on another node
-          </ul> </h3>
-          <aside class="notes"> </aside>
-        </section>
-
-        <section data-background="assets/front-page.jpg">
-          <h2> Multiple YARNs </h2>
-          <ul> <h3>
-            <li>Multiple isolated YARN clusters:
-              <br>different versions, dev/test/prod
-            <li>YARN version upgrade, workload migration 
-            <li>Scale up new YARN cluster, scale down old
-            <li>Same data layer (HDFS)
-          </ul> </h3>
-          <aside class="notes"> </aside>
-        </section>
-
-        <section data-background="assets/front-page.jpg">
-          <h2> Sharing with non-Hadoop workloads </h2>
-          <ul> <h3>
-            <li>Web servers, data ingestion: write to HDFS
-            <li>Followed by periodic Hadoop analytics, <br>write to HDFS/HBase
-            <li>Which may feed back into the webserver, <br>or start another data ingestion cycle
-            <li>Different needs over time, dynamically adjust
-          </ul> </h3>
-          <aside class="notes">
-          </aside>
-        </section>
-
+	  <h2>Introducing Myriad</h2>
+	</section>
+	
         <section data-background="assets/front-page.jpg">
           <h2>Myriad Overview</h2>
           <h3> <ul>
@@ -400,19 +370,6 @@ YARN-NodeLabels: Attributes+Reservations
         </section>
 
         <section data-background="assets/front-page.jpg">
-          <h2>Features in Progress</h2>
-          <h3> <ul>
-            <li>Fine-grained scaling
-            <li>Myriad scheduler HA, task reconciliation
-            <li>RM discovery using Marathon/Mesos-DNS
-            <li>Distribution of hadoop binaries
-            <li>Dockerization
-            <li>Upcoming: Multiple isolated YARN clusters
-            <li>Upcoming: Data locality optimizations
-          </ul> </h3>
-        </section>
-
-        <section data-background="assets/front-page.jpg">
           <h2>Myriad improves Mesos</h2>
           <table>
           <tr>
@@ -444,6 +401,57 @@ YARN-NodeLabels: Attributes+Reservations
           </tr>
           </table>
           <aside class="notes"></aside>
+        </section>
+
+        <section data-background="assets/front-page.jpg">
+	  <h2>Use-cases</h2>
+	</section>
+	
+        <section data-background="assets/front-page.jpg">
+          <h2>YARN on the fly</h2>
+          <ul> <h3>
+            <li>Quick dev/QA clusters; compatibility testing
+            <li>YARN doesn't run YARN well, Mesos does
+            <li>Fault-tolerance: Run RM on Marathon, auto-restart on another node
+          </ul> </h3>
+          <aside class="notes"> </aside>
+        </section>
+
+        <section data-background="assets/front-page.jpg">
+          <h2> Multiple YARNs </h2>
+          <ul> <h3>
+            <li>Multiple isolated YARN clusters:
+              <br>different versions, dev/test/prod
+            <li>YARN version upgrade, workload migration 
+            <li>Scale up new YARN cluster, scale down old
+            <li>Same data layer (HDFS)
+          </ul> </h3>
+          <aside class="notes"> </aside>
+        </section>
+
+        <section data-background="assets/front-page.jpg">
+          <h2> Sharing with non-Hadoop workloads </h2>
+          <ul> <h3>
+            <li>Web servers, data ingestion: write to HDFS
+            <li>Followed by periodic Hadoop analytics, <br>write to HDFS/HBase
+            <li>Which may feed back into the webserver, <br>or start another data ingestion cycle
+            <li>Different needs over time, dynamically adjust
+          </ul> </h3>
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section data-background="assets/front-page.jpg">
+          <h2>Features in Progress</h2>
+          <h3> <ul>
+            <li>Fine-grained scaling
+            <li>Myriad scheduler HA, task reconciliation
+            <li>RM discovery using Marathon/Mesos-DNS
+            <li>Distribution of hadoop binaries
+            <li>Dockerization
+            <li>Upcoming: Multiple isolated YARN clusters
+            <li>Upcoming: Data locality optimizations
+          </ul> </h3>
         </section>
 
         <section data-background="assets/front-page.jpg">
