@@ -198,23 +198,22 @@ YARN-NodeLabels: Attributes+Reservations
         <section data-background="assets/front-page.jpg">
           <h2>What's running on your datacenter?</h2>
           <h3> <ul>
-            <li>Tier 1 services
-            <li>Tier 2 services
-            <li>High Priority Batch
-            <li>Best Effort, backfill
+            <li class="fragment">Tier 1 services
+            <li class="fragment">Tier 2 services
+            <li class="fragment">High Priority Batch
+            <li class="fragment">Best Effort, backfill
           </ul> </h3>
         </section>
 
         <section data-background="assets/front-page.jpg">
           <h2>Requirements</h2>
           <h3> <ul>
-            <li>Programming models based on resources, <br>not machines
-            <li>Custom resource types
-            <li>Custom scheduling algorithms:
-              <br>Fast vs. careful/slow
-            <li>Lightweight executors, fast task launch time
-            <li>Multi-tenancy, utilization, strong isolation
-            <li>Preemption/oversubscription, fault-tolerance
+            <li class="fragment">Programming models based on resources, <br>not machines
+            <li class="fragment">Custom resource types
+            <li class="fragment"><span>Custom scheduling algorithms:<br>Fast vs. careful/slow</span>
+            <li class="fragment">Lightweight executors, fast task launch time
+            <li class="fragment">Multi-tenancy, utilization, strong isolation
+            <li class="fragment">Preemption/oversubscription, fault-tolerance
           </ul> </h3>
         </section>
 
@@ -307,6 +306,11 @@ YARN-NodeLabels: Attributes+Reservations
           </aside>
         </section>
 
+	<section>
+          <img src="assets/static-partition.png">
+          <aside class="notes"></aside>
+        </section>
+	
         <section data-background="assets/front-page.jpg">
           <h2>Static Partitioning sucks</h2>
           <ul> <h3>
@@ -318,11 +322,6 @@ YARN-NodeLabels: Attributes+Reservations
               <li>Want multi-tenancy, resource sharing/isolation
           </ul> </h3>
           <aside class="notes"> </aside>
-        </section>
-
-        <section>
-          <img src="assets/static-partition.png">
-          <aside class="notes"></aside>
         </section>
 
         <section>
