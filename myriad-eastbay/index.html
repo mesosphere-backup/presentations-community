@@ -280,7 +280,7 @@ YARN-NodeLabels: Attributes+Reservations
           <aside class="notes">
           The OS for your Datacenter, with Mesos as the Kernel
           HDFS, mesos-dns, CLI, Viz
-          Apps: SOA web-services, Jenkins/build-farm, memcache, cron-jobs, shell scripts, Kubernetes, Cassandra, (HDFS), ElasticSearch, MPI/HPC jobs, etc.
+          Apps: SOA web-services, Jenkins/build-farm, memcache, cron-jobs, shell scripts, Kubernetes, Cassandra, (HDFS), ElasticSearch, MPI/HPC jobs, JARVIS etc.
           </aside>
 				</section-->
 
@@ -336,10 +336,10 @@ YARN-NodeLabels: Attributes+Reservations
         <section data-background="assets/front-page.jpg">
           <h2>Myriad Overview</h2>
           <h3> <ul>
-            <li>Makes YARN (Yet Another) Mesos Framework
-            <li>Mesos manages DC, YARN manages Hadoop
-            <li>Get resources from Mesos, scale YARN
-            <li>Reclaim YARN resources, give back to Mesos
+            <li class="fragment">Makes YARN (Yet Another) Mesos Framework
+            <li class="fragment">Mesos manages DC, YARN manages Hadoop
+            <li class="fragment">Get resources from Mesos, scale YARN
+            <li class="fragment">Reclaim YARN resources, give back to Mesos
           </ul> </h3>
         </section>
 
@@ -353,7 +353,7 @@ YARN-NodeLabels: Attributes+Reservations
           </aside>
         </section>
 
-        <section data-background="assets/front-page.jpg">
+        <section data-background="white">
           <img src="assets/high-level-architecture.png">
           <aside class="notes">
           SOA web-services, Jenkins/build-farm, memcache, cron-jobs, shell scripts, Kubernetes, Cassandra, (HDFS), ElasticSearch, MPI/HPC jobs, etc.
@@ -410,9 +410,10 @@ YARN-NodeLabels: Attributes+Reservations
         <section data-background="assets/front-page.jpg">
           <h2>YARN on the fly</h2>
           <ul> <h3>
-            <li>Quick dev/QA clusters; compatibility testing
-            <li>YARN doesn't run YARN well, Mesos does
+            <li>Elastic: Scale up/down NMs as needed
             <li>Fault-tolerance: Run RM on Marathon, auto-restart on another node
+            <li>Quick dev/QA clusters; compatibility testing
+            <!-- <li>YARN doesn't run YARN well, Mesos does !-->
           </ul> </h3>
           <aside class="notes"> </aside>
         </section>
