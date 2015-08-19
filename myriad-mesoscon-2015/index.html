@@ -45,11 +45,11 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
         <section data-background="assets/front-page.jpg">
-					<h2>&nbsp; Apache Myriad</h2>
+			    <img src="assets/myriad_logo_transparent_400x99.png">	
 					<h3>Resource Sharing Beyond Boundaries</h3>
           <center>
             <a href="http://www.mohitsoni.com">Mohit Soni</a>
-            &nbsp;&nbsp;<a href="mailto:smarella@maprtech.com">Santosh Marella</a>
+            &nbsp;&nbsp;<a href="https://github.com/smarella">Santosh Marella</a>
           </center>
 				</section>
 
@@ -341,17 +341,7 @@ YARN-NodeLabels: Attributes+Reservations
           </ul> </h3>
         </section>
 
-        <section data-background="assets/front-page.jpg">
-          <img src="assets/data-center-architecture.png">
-          <aside class="notes">
-            <li> Apps/Micro Services/Distributed Frameworks need infinite resources, infinite storage.
-            <li> "Big Apps" and "Big Data" Symbiosis
-            <li> Big Apps require fast access to storage
-            <li> Can't have cluster silos anymore
-          </aside>
-        </section>
-
-				<section data-background="assets/front-page.jpg">
+				<!--section data-background="assets/front-page.jpg">
           <img src="assets/CGS1.jpg">
         </section>
 
@@ -370,9 +360,64 @@ YARN-NodeLabels: Attributes+Reservations
 				<section data-background="assets/front-page.jpg">
           <img src="assets/CGS5.jpg">
         </section>
-
 				<section data-background="assets/front-page.jpg">
           <img src="assets/CGS6.jpg">
+        </section-->
+
+
+        <section>
+          <img src="assets/resource_sharing/1_Mesos_Cluster.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/3_Myriad_Initialized_Using_YARN_Config.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/4_Myriad_Components.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/5_Myriad_Registers_With_Mesos.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/6_Myriad_REST_API.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/7_Flexup_Medium_NM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/8_Mesos_Offer_For_Medium_NM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/9_Medium_NM_Registers_With_RM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/10_Medium_NM_Holds_Reserved_Resources.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/11_Flexup_Zero_NM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/12_No_Reservation_For_Zero_NM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/13_YARN_Job_Submission.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/14_Containers_Launched_On_Medium_NM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/15_Receive_Offer_To_Expand_Zero_NM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/16_Containers_Launched_On_Zero_NM.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/17_Containers_Finish.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/18_Containers_Finish_Resources_Held_On_Medium.png">
+        </section>
+        <section>
+          <img src="assets/resource_sharing/19_Job_Finish.png">
         </section>
 
         <section data-background="assets/front-page.jpg">
@@ -477,34 +522,16 @@ YARN-NodeLabels: Attributes+Reservations
 
         <section data-background="assets/front-page.jpg">
           <h2>Learn More!</h2>
-
-          <h3><table>
-          <tr>
-          <td style="vertical-align: middle;">
-          <!--TODO:credit--><img width=150 src="assets/flying-art-birds-cute-Favim.com-669833.jpg"/></td>
-          <td style="vertical-align: middle;">
+          <h3>
             <p><a href="https://wiki.apache.org/incubator/MyriadProposal">Apache Myriad Incubator Proposal</a></p>
             <p><a href="https://incubator.apache.org/projects/myriad.html">Apache Myriad Incubator Status Page</a></p>
             <p><a href="https://github.com/mesos/myriad">https://github.com/mesos/myriad</a></p>
-            <p><a href="http://mail-archives.apache.org/mod_mbox/incubator-myriad-dev/">dev@myriad.incubator.apache.org</a></p>
-          </td>
-          </tr>
-          <tr>
-          <td>&nbsp;</td>
-          </tr>
-          <tr>
-          <td style="vertical-align: top;">
-          <img src="assets/mesos.png"/></td>
-          <td style="vertical-align: middle;">
-            <p><a href="http://mesos.apache.org">http://mesos.apache.org</a></p>
-            <p><a href="https://github.com/apache/mesos/">https://github.com/apache/mesos</a></p>
-            <p><a href="http://mesosphere.com">http://mesosphere.com</a></p>
-          </td>
-          </tr>
-          </table> </h3>
+            <p><a href="http://mail-archives.apache.org/mod_mbox/incubator-myriad-dev/">dev@myriad.incubator.apache.org</a></p>            <p><a href="https://issues.apache.org/jira/browse/MYRIAD">MYRIAD JIRA</a></p>
+          </h3>
+          <img src="assets/myriad_logo_transparent_400x99.png"/></td>
 
-          <aside class="notes">I have business cards and lots of stickers!</aside>
-				</section>
+          <aside class="notes">Questions? Stickers and mints available.</aside>
+        </section>
 
 			</div>
 
@@ -524,7 +551,7 @@ YARN-NodeLabels: Attributes+Reservations
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
