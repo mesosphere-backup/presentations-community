@@ -183,13 +183,28 @@ YARN-NodeLabels: Attributes+Reservations
           <img width="100%" src="assets/mesos-dynamic.png"/>
         </section-->
 
+        <section data-background="black">
+          <img width="100%" src="assets/stats/top_level.png"/>
+          <img width="100%" src="assets/stats/commits.png"/>
+          <aside class="notes">
+            <li>15 Contributors, diverse community
+            <li>Increased activity after Apache incubation in March
+          </aside>
+        </section>
+        <section data-background="black">
+          <img width="100%" src="assets/stats/traffic.png"/>
+          <aside class="notes">
+            <li>Recent activity on github
+          </aside>
+        </section>
+
         <section data-background="assets/front-page.jpg">
           <h2>Agenda</h2>
           <h3> <ul>
             <li>What's up with Datacenters these days?
             <li>Apache Mesos vs. Apache Hadoop/YARN?
             <li>Why would you want/need both?
-            <li>Introducing Apache Myriad
+            <li>Resource Sharing with Apache Myriad
           </ul> </h3>
         </section>
 
@@ -328,16 +343,15 @@ YARN-NodeLabels: Attributes+Reservations
         </section>
 
         <section data-background="assets/front-page.jpg">
-	  <h2>Introducing Myriad</h2>
-	</section>
+          <h2>Introducing Myriad</h2>
+        </section>
 
         <section data-background="assets/front-page.jpg">
           <h2>Myriad Overview</h2>
           <h3> <ul>
-            <li class="fragment">Makes YARN (Yet Another) Mesos Framework
-            <li class="fragment">Mesos manages DC, YARN manages Hadoop
-            <li class="fragment">Get resources from Mesos, scale YARN
-            <li class="fragment">Reclaim YARN resources, give back to Mesos
+            <li>Mesos Framework for Apache YARN
+            <li>Mesos manages DC, YARN manages Hadoop
+            <li>Coarse and fine grained resource sharing
           </ul> </h3>
         </section>
 
@@ -365,6 +379,9 @@ YARN-NodeLabels: Attributes+Reservations
         </section-->
 
 
+        <section data-background="assets/front-page.jpg">
+          <h2>Resource Sharing</h2>
+        </section>
         <section>
           <img src="assets/resource_sharing/1_Mesos_Cluster.png">
         </section>
@@ -391,12 +408,18 @@ YARN-NodeLabels: Attributes+Reservations
         </section>
         <section>
           <img src="assets/resource_sharing/10_Medium_NM_Holds_Reserved_Resources.png">
+          <aside class="notes">
+            <li>This is coarse grained resource sharing
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/11_Flexup_Zero_NM.png">
         </section>
         <section>
           <img src="assets/resource_sharing/12_No_Reservation_For_Zero_NM.png">
+          <aside class="notes">
+            <li>This is fine grained resource sharing
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/13_YARN_Job_Submission.png">
@@ -441,22 +464,26 @@ YARN-NodeLabels: Attributes+Reservations
           <table>
           <tr>
             <td><h3><i class="fa fa-signal"></i></h3></td><td><h3>Elastic scaling</h3></td>
-          </tr><tr>
+          </tr>
+          <tr>
             <td><h3><i class="fa fa-bomb"></i></h3></td><td><h3>Fault-tolerant: Maintain NM capacity</h3></td>
-          </tr><tr>
+          </tr>
+          <tr>
             <td><h3><i class="fa fa-tasks"></i></h3></td><td><h3>Share resources with other workloads, <br>improve resource utilization</h3></td>
-          </tr><tr>
-            <td><h3><i class="fa fa-columns"></i></h3></td><td><h3>Multiple isolated Hadoop clusters <br>sharing node resources and DFS</h3></td>
-          </tr><tr>
+          </tr>
+          <tr>
+            <td><h3><i class="fa fa-clock-o"></i></h3></td><td><h3>High SLA hadoop jobs unaffected</h3></td>
+          </tr>
+          <tr>
             <td><h3><i class="fa fa-code-fork"></i></h3></td><td><h3>No YARN/Hadoop code changes</h3></td>
           </tr>
           </table>
           <aside class="notes"></aside>
         </section>
 
-        <section data-background="assets/front-page.jpg">
-	  <h2>Use-cases</h2>
-	</section>
+        <!--section data-background="assets/front-page.jpg">
+          <h2>Use-cases</h2>
+        </section>
 
         <section data-background="assets/front-page.jpg">
           <h2>YARN on the fly</h2>
@@ -464,7 +491,6 @@ YARN-NodeLabels: Attributes+Reservations
             <li>Elastic: Scale up/down NMs as needed
             <li>Fault-tolerance: Run RM on Marathon, auto-restart on another node
             <li>Quick dev/QA clusters; compatibility testing
-            <!-- <li>YARN doesn't run YARN well, Mesos does !-->
           </ul> </h3>
           <aside class="notes"> </aside>
         </section>
@@ -491,22 +517,21 @@ YARN-NodeLabels: Attributes+Reservations
           </ul> </h3>
           <aside class="notes">
           </aside>
-        </section>
+        </section!-->
 
         <section data-background="assets/front-page.jpg">
-          <h2>Features in Progress</h2>
+          <h2>Other Features</h2>
           <h3> <ul>
-            <li>Fine-grained scaling
-            <li>Myriad scheduler HA, task reconciliation
             <li>RM discovery using Marathon/Mesos-DNS
             <li>Distribution of hadoop binaries
-            <li>Dockerization
-            <li>Upcoming: Multiple isolated YARN clusters
-            <li>Upcoming: Data locality optimizations
+            <li>User Interface
+            <li>Ability to launch Job History Server<br>(in progress)
+            <li>Myriad scheduler HA, task reconciliation<br>(in progress)
+            <li style="color: lightgreen">Your favorite feature here!
           </ul> </h3>
         </section>
 
-        <section data-background="assets/front-page.jpg">
+        <!--section data-background="assets/front-page.jpg">
           <h2>Apache Incubator Podling Update</h2>
           <h3> <ul>
               <li>Done: Proposal, Status page, mailing lists
@@ -518,15 +543,16 @@ YARN-NodeLabels: Attributes+Reservations
               <li>Release: version, vote, ShipIt!
               <li>Community: more users, committers
           </ul> </h3>
-        </section>
+        </section-->
 
         <section data-background="assets/front-page.jpg">
           <h2>Learn More!</h2>
           <h3>
+            <p><a href="https://github.com/mesos/myriad">https://github.com/mesos/myriad</a></p>
+            <p><a href="http://mail-archives.apache.org/mod_mbox/incubator-myriad-dev/">dev@myriad.incubator.apache.org</a></p>
+            <p><a href="https://issues.apache.org/jira/browse/MYRIAD">MYRIAD JIRA</a></p>
             <p><a href="https://wiki.apache.org/incubator/MyriadProposal">Apache Myriad Incubator Proposal</a></p>
             <p><a href="https://incubator.apache.org/projects/myriad.html">Apache Myriad Incubator Status Page</a></p>
-            <p><a href="https://github.com/mesos/myriad">https://github.com/mesos/myriad</a></p>
-            <p><a href="http://mail-archives.apache.org/mod_mbox/incubator-myriad-dev/">dev@myriad.incubator.apache.org</a></p>            <p><a href="https://issues.apache.org/jira/browse/MYRIAD">MYRIAD JIRA</a></p>
           </h3>
           <img src="assets/myriad_logo_transparent_400x99.png"/></td>
 
