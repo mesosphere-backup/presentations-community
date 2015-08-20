@@ -344,6 +344,10 @@ YARN-NodeLabels: Attributes+Reservations
 
         <section data-background="assets/front-page.jpg">
           <h2>Introducing Myriad</h2>
+          <aside class="notes">
+           <li> What it is?
+           <li> How it solves the static partitioning problem
+          </aside>
         </section>
 
         <section data-background="assets/front-page.jpg">
@@ -353,6 +357,10 @@ YARN-NodeLabels: Attributes+Reservations
             <li>Mesos manages DC, YARN manages Hadoop
             <li>Coarse and fine grained resource sharing
           </ul> </h3>
+          <aside class="notes">
+           <li> Makes YARN coexist with other Mesos frameworks
+           <li> Reduces IT costs with resource sharing
+          </aside>
         </section>
 
 				<!--section data-background="assets/front-page.jpg">
@@ -381,66 +389,147 @@ YARN-NodeLabels: Attributes+Reservations
 
         <section data-background="assets/front-page.jpg">
           <h2>Resource Sharing</h2>
+          <aside class="notes">
+           <li> Let's explore resource sharing in more detail
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/1_Mesos_Cluster.png">
+          <aside class="notes">
+           <li> We start with a Mesos cluster
+           <li> Myriad assumes HDFS to be present in the DC
+           <li> There is also a HDFS framework for Mesos
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/3_Myriad_Initialized_Using_YARN_Config.png">
+          <aside class="notes">
+           <li> Dotted lines for Mesos Task
+           <li> Marathon + Mesos DNS
+           <li> Myriad is initialized by extends YARN's Schedulers
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/4_Myriad_Components.png">
+          <aside class="notes">
+           <li> Myriad code running inside RM <br> consists of multiple components
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/5_Myriad_Registers_With_Mesos.png">
+          <aside class="notes">
+           <li> Uses Mesos Scheduler to register with Mesos.
+           <li> Discovers Mesos master via ZK or directly using Myriad config.
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/6_Myriad_REST_API.png">
+          <aside class="notes">
+           <li> Handle for admin
+           <li> Resources obtained from Mesos <br> for launching YARN processes
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/7_Flexup_Medium_NM.png">
+          <aside class="notes">
+           <li> Profile == abstraction NM's advertisable resources
+           <li> Medium e.g. 10G of RAM, 5 CPU
+           <li> Profile is defined in Myriad's configuration
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/8_Mesos_Offer_For_Medium_NM.png">
+          <aside class="notes">
+           <li> Waits for a matching mesos offer
+           <li> Offer > Executor + NM + Profile
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/9_Medium_NM_Registers_With_RM.png">
+          <aside class="notes">
+           <li> Dotted line
+           <li> Resources to contain Executor + NM + Profile
+           <li> Currently using a custom executor, but things might change
+           <li> NM discovers RM via YARN's configuration
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/10_Medium_NM_Holds_Reserved_Resources.png">
           <aside class="notes">
             <li>This is coarse grained resource sharing
+            <li>Resources reserved for future YARN containers
+            <li>Sounds wasteful? Absolutely not! Look at the cluster silos today
+            <li>The REST API gives the admin full control 
+            <li># instances, profiles
           </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/11_Flexup_Zero_NM.png">
+          <aside class="notes">
+            <li>Another model for resource sharing
+            <li>Special profile called "zero"
+            <li>Profiles == NM's advertisable resources
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/12_No_Reservation_For_Zero_NM.png">
           <aside class="notes">
             <li>This is fine grained resource sharing
+            <li>Zero resources? Sounds ridiculous?
+            <li>Let's look at what happens when a YARN job comes along.
           </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/13_YARN_Job_Submission.png">
+          <aside class="notes">
+            <li>Job submissions go to RM
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/14_Containers_Launched_On_Medium_NM.png">
+          <aside class="notes">
+            <li>Scheduling at RM happens when a NM HBs
+            <li>Containers allocated based on NM's capacity
+            <li>Medium NM gets containers based on reserved capacity
+            <li>Zero NM doesn't get any containers
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/15_Receive_Offer_To_Expand_Zero_NM.png">
+          <aside class="notes">
+            <li>No higher priority frameworks
+            <li>Resources offered to Myriad
+            <li>Myriad's interceptors inside RM dynamically increase the NM's capacity
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/16_Containers_Launched_On_Zero_NM.png">
+          <aside class="notes">
+            <li>Placeholder tasks
+            <li>No offers == no containers
+            <li>But that's what we want. Tier 1 services should have resources.
+            <li>No tier 1 services, YARN gets plentiful
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/17_Containers_Finish.png">
+          <aside class="notes">
+            <li>Containers finish arbitrarily
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/18_Containers_Finish_Resources_Held_On_Medium.png">
+          <aside class="notes">
+            <li>Medium NM holds on to resources
+            <li>Zero NM releases resources
+          </aside>
         </section>
         <section>
           <img src="assets/resource_sharing/19_Job_Finish.png">
+          <aside class="notes">
+            <li>Optimal amount of resources
+            <li>Optimal is subjective. Varies from cluster to cluster.
+          </aside>
         </section>
 
         <section data-background="assets/front-page.jpg">
@@ -456,7 +545,10 @@ YARN-NodeLabels: Attributes+Reservations
             <td><h3><i class="fa fa-code-fork"></i></h3></td><td><h3>No Mesos code changes necessary</h3></td>
           </tr>
           </table>
-          <aside class="notes"></aside>
+          <aside class="notes">
+            <li>Hadoop workloads suddenly can run in a Mesos cluster
+            <li>Resource sharing is powerful
+          </aside>
         </section>
 
         <section data-background="assets/front-page.jpg">
@@ -478,7 +570,10 @@ YARN-NodeLabels: Attributes+Reservations
             <td><h3><i class="fa fa-code-fork"></i></h3></td><td><h3>No YARN/Hadoop code changes</h3></td>
           </tr>
           </table>
-          <aside class="notes"></aside>
+          <aside class="notes">
+            <li>Provision as many or as little NMs
+            <li>Use coarse grained scaling wisely for high SLA jobs
+          </aside>
         </section>
 
         <!--section data-background="assets/front-page.jpg">
@@ -522,11 +617,11 @@ YARN-NodeLabels: Attributes+Reservations
         <section data-background="assets/front-page.jpg">
           <h2>Other Features</h2>
           <h3> <ul>
-            <li>RM discovery using Marathon/Mesos-DNS
+            <li>RM failover/discovery using <br>Marathon/Mesos-DNS
             <li>Distribution of hadoop binaries
-            <li>User Interface
-            <li>Ability to launch Job History Server<br>(in progress)
+            <li>Web Interface
             <li>Myriad scheduler HA, task reconciliation<br>(in progress)
+            <li>Ability to launch Job History Server<br>(in progress)
             <li style="color: lightgreen">Your favorite feature here!
           </ul> </h3>
         </section>
